@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>集合</title>
+</head>
+
+<body>
+    <script src="set.js"></script>
+    <script>
+    var setA = new Set();
+    setA.add(1);
+    setA.add(2);
+    setA.add(3);
+
+    var setB = new Set();
+    setB.add(2);
+    setB.add(3);
+    setB.add(4);
+    setB.add(5);
+    setB.add(6);
+    setB.add(7);
+
+    console.log('集合A: ',setA.values());
+    console.log('集合B: ',setB.values());
+
+    var unionAB = setA.union(setB);
+    console.log('并集 A ∪B : ',unionAB.values());
+    //console.log(unionAB.getItems());
+   
+    var intersectionAB = setA.intersection(setB);
+    console.log('交集 A ∩ B: ',intersectionAB.values());
+
+    var differenceAB = setA.difference(setB);
+    var differenceBA = setB.difference(setA);
+    console.log('差集 A - B : ',differenceAB.values());
+    console.log('差集 B - A : ',differenceBA.values());
+
+    var setC = new Set();
+    setC.add(2);
+    setC.add(3);
+    setC.add(4);
+    console.log('集合C: ',setC.values());
+
+    console.log('A是B的子集吗？',setA.subset(setB));
+    console.log('C是B的子集吗？',setC.subset(setB));
+    </script>
+</body>
+
+</html>
+
