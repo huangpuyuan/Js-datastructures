@@ -103,8 +103,7 @@
                 for (var j = 0, jlen = subMenuItems.length; j < jlen; j++) {
                     subMenuItems[j].style.display = "none";
                     menuItems[j].style.background = "none";
-
-                }
+                };
                 subMenuItems[item].style.display = "block";
                 menuItems[item].style.background = "rgba(0,0,0,0.1)";
             };
@@ -116,15 +115,15 @@
         }
 
         subMenu.onmouseout = function() {
-            this.className = "sub-menu hide";
+            this.className = "sub-menu hide";              
         }
 
         banner.onmouseout = function() {
-            subMenu.className = "sub-menu hide";
+            subMenu.className = "sub-menu hide";              
         }
 
-        menuContent.onmouseout = function() {
-            subMenu.className = "sub-menu hide";
+        menuContent.onmouseoverout = function() {
+            subMenu.className = "sub-menu hide";            
         }
     }
 
